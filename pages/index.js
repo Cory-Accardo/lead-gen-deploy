@@ -1,65 +1,78 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/index.module.css';
+import Header from '../components/Header';
+import Searchbar from '../components/Searchbar';
+import Button from '../components/Button';
+import {useState} from 'react';
 
-export default function Home() {
+
+function App() {
+  const [input, setInput] = useState({
+    param1: {
+      text: 'Default',
+      metaArray: []
+    },
+    param2: {
+      text: 'Default',
+      metaArray: []
+    }
+  });
+  const [result, setResult] = useState('defaultResult')
+  const handleResult = (response) => {
+    setResult(response)
+  }
+  const handleInputChange = (e) => {
+    let newInput;
+    const newInputText = e.target.value;
+    const newInputMetaArray = e.target.alt.split(',');
+    const oldParamOneText = input.param1.text;
+    const oldParamOneMetaArray = input.param1.metaArray;
+    const oldParamTwoText = input.param2.text;
+    const oldParamTwoMetaArray = input.param2.metaArray;
+    if(newInputMetaArray[0] === "business"){
+      newInput = {
+        param1: {
+          text: newInputText,
+          metaArray: newInputMetaArray
+        },
+        param2: {
+          text: oldParamTwoText,
+          metaArray: oldParamTwoMetaArray
+        }
+      }
+    }
+    else if (newInputMetaArray[0] === "location"){
+      newInput = {
+        param1: {
+          text: oldParamOneText,
+          metaArray: oldParamOneMetaArray
+        },
+        param2: {
+          text: newInputText,
+          metaArray: newInputMetaArray
+        }
+      }
+    }
+    else{
+      newInput = input
+    }
+    setInput(newInput)
+  }
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div>
+      <Header/>
+      <body className={styles.skeleton}>
+        <div className={styles.search_container}>
+          <h2 className={styles.search_prefix}>Find me every</h2>
+          <Searchbar url="search" changeInput={handleInputChange} param="business"/>
+          <h2 className={styles.search_prefix}>in</h2>
+          <Searchbar url="search" changeInput={handleInputChange} param="location"/>
+          <Button handleResult={handleResult} inputArray={input}/>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <h1>{result}</h1>
+      </body>
     </div>
-  )
+  );
 }
+
+
+export default App;

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+
+.Button {
+  font-family: Calibri;
+  border-radius: 10px;
+  font-weight: 900;
+  color: #1c413bce;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #2d5b5493;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.Button:hover {
+  transition: .25s ease-in-out;
+  background: #2D5B54;
+  color: white;
+}
+
+
+.Button span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}

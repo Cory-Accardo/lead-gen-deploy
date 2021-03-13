@@ -1,0 +1,14 @@
+.search_container{
+  display:flex;
+  justify-content: center;
+  margin: 10%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.search_prefix{
+  font-family: Calibri;
+  font-weight: 300;
+  font-size: 40px;
+  color: #2D5B54;
+}
