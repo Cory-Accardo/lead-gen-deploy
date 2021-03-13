@@ -13,7 +13,7 @@ function Searchbar(props) {
   })
   return (
     <div className={styles.Searchbar}>
-      <input spellcheck = "false" maxLength="29" className={styles.input} alt = {[[props.param],[props.url]]} type="text" onChange={e => {
+      <input spellCheck = "false" maxLength="29" className={styles.input} alt = {[[props.param],[props.url]]} type="text" onChange={e => {
         props.changeInput(e)
         handleSearchSpace(e)
         }}/>

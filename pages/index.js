@@ -2,6 +2,7 @@ import styles from '../styles/index.module.css';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Button from '../components/Button';
+import YelpContainer from '../components/YelpContainer';
 import {useState} from 'react';
 
 
@@ -16,7 +17,7 @@ function App() {
       metaArray: []
     }
   });
-  const [result, setResult] = useState('defaultResult')
+  const [result, setResult] = useState(null)
   const handleResult = (response) => {
     setResult(response)
   }
@@ -68,7 +69,7 @@ function App() {
           <Searchbar url="search" changeInput={handleInputChange} param="location"/>
           <Button handleResult={handleResult} inputArray={input}/>
         </div>
-        <h1>{result}</h1>
+        <YelpContainer data={result}/>
       </body>
     </div>
   );
