@@ -1,0 +1,30 @@
+#parent_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: all 5;
+    justify-items: center;
+}
+
+.yelp_child{
+    text-align: center;
+    font-size: 30px;
+    color: #2D5B54;
+    padding: 5px;
+    font-family: Calibri;
+    font-weight: 300;
+}
+
+
+.yelp_child_body{
+    background-color: inherit;
+}
+
+.list{
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.image{
+    max-width: 50%;
+    height: auto;
+}

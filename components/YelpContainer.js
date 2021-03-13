@@ -1,4 +1,5 @@
 import YelpChild from './YelpChild'
+import styles from '../styles/Container.module.css'
 
 function YelpContainer(props) {
     const handleDisplay = () =>{
@@ -15,8 +16,10 @@ function YelpContainer(props) {
         }
     }
   return (
-    <div id="YelpContainer">
+    <div id={styles.parent_container}>
+      <div id="YelpContainer">
         {handleDisplay(props.data)}
+      </div>
     </div>
   );
 }

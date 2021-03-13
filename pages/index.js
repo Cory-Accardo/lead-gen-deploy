@@ -1,3 +1,5 @@
+import NeuronImage from '../assets/svg/neuron.svg'
+
 import styles from '../styles/index.module.css';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
@@ -71,6 +73,8 @@ function App() {
         </div>
         <YelpContainer data={result}/>
       </body>
+      <NeuronImage id={styles.svg}/>
+      <footer className={styles.footer}/>
     </div>
   );
 }
