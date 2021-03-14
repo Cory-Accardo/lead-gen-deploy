@@ -18,6 +18,9 @@ function App() {
     }
   });
   const [result, setResult] = useState(null)
+  const handleLogoClick = (e) => {
+    setResult(null)
+  }
   const handleResult = (response) => {
     setResult(response)
   }
@@ -61,7 +64,7 @@ function App() {
   return (
     <div className = {styles.skeleton}>
       <div className = {styles.Header}>
-        <h1 className= {styles.logo_group} id={styles.logo_title}>BE BOPE</h1>
+        <h1 onClick = {handleLogoClick} className= {styles.logo_group} id={styles.logo_title}>BE BOPE</h1>
       </div>
       <body>
         <div className={styles.search_container}>

@@ -39,17 +39,10 @@
   position: sticky;
 }
 
-
-
 .logo_group{
   margin: 5px 0 10px 0;
 }
 
-#logo_image{
-  margin-left: 10%;
-  width: 3.5%;
-  height: auto;
-}
 
 #logo_title{
   color: #2D5B54;
@@ -60,3 +53,4 @@
   margin: 5% auto 2% auto;
   align-self: center;
 }
+
