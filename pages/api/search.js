@@ -12,7 +12,7 @@ export default (req, res) => {
     const category = JSON.parse(req.query.param1)
     const location = JSON.parse(req.query.param2)
     const searchRequest = {
-        category: category.text,
+        term: category.text,
         location: location.text,
         limit: 50,
         radius: 40000,

@@ -1,7 +1,5 @@
-import NeuronImage from '../assets/svg/neuron.svg'
-
+import PyramidImage from '../assets/svg/temple.svg'
 import styles from '../styles/index.module.css';
-import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Button from '../components/Button';
 import YelpContainer from '../components/YelpContainer';
@@ -61,11 +59,13 @@ function App() {
     setInput(newInput)
   }
   return (
-    <div>
-      <Header/>
-      <body className={styles.skeleton}>
+    <div className = {styles.skeleton}>
+      <div className = {styles.Header}>
+        <h1 className= {styles.logo_group} id={styles.logo_title}>BE BOPE</h1>
+      </div>
+      <body>
         <div className={styles.search_container}>
-          <h2 className={styles.search_prefix}>Find me every</h2>
+          <h2 className={styles.search_prefix}>Search for</h2>
           <Searchbar url="search" changeInput={handleInputChange} param="business"/>
           <h2 className={styles.search_prefix}>in</h2>
           <Searchbar url="search" changeInput={handleInputChange} param="location"/>
@@ -73,8 +73,7 @@ function App() {
         </div>
         <YelpContainer data={result}/>
       </body>
-      <NeuronImage id={styles.svg}/>
-      <footer className={styles.footer}/>
+      <PyramidImage id={styles.svg}/>
     </div>
   );
 }
