@@ -1,8 +1,8 @@
 import PyramidImage from '../assets/svg/temple.svg'
 import styles from '../styles/index.module.css';
-import Searchbar from '../components/Searchbar';
-import Button from '../components/Button';
-import YelpContainer from '../components/YelpContainer';
+import Searchbar from '../components/Searchbar.js';
+import Button from '../components/Button.js';
+import YelpContainer from '../components/YelpContainer.js';
 import {useState} from 'react';
 
 

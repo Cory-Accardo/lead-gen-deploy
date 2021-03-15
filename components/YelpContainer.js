@@ -1,4 +1,4 @@
-import YelpChild from './YelpChild'
+import YelpChild from './YelpChild.js'
 import styles from '../styles/Container.module.css'
 import {useEffect} from 'react'
 
