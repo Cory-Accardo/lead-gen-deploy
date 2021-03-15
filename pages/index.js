@@ -9,17 +9,23 @@ import {useState} from 'react';
 function App() {
   const [input, setInput] = useState({
     param1: {
-      text: 'Default',
+      text: '',
       metaArray: []
     },
     param2: {
-      text: 'Default',
+      text: '',
       metaArray: []
     }
   });
   const [result, setResult] = useState(null)
+  const [filter, setFilter] = useState(null)
   const handleLogoClick = (e) => {
     setResult(null)
+  }
+  const handleScroll = e => {
+    if(result == null || JSON.parse(result).data.length < 1){
+      document.getElementById(styles.svg).style.top = `${e.deltaY}px`
+    }
   }
   const handleResult = (response) => {
     setResult(response)
@@ -61,8 +67,11 @@ function App() {
     }
     setInput(newInput)
   }
+  const handleFilterState = filterState => {
+    setFilter(filterState)
+  }
   return (
-    <div className = {styles.skeleton}>
+    <div onWheel={handleScroll} className = {styles.skeleton}>
       <div className = {styles.Header}>
         <h1 onClick = {handleLogoClick} className= {styles.logo_group} id={styles.logo_title}>BE BOPE</h1>
       </div>
@@ -72,9 +81,9 @@ function App() {
           <Searchbar url="search" changeInput={handleInputChange} param="business"/>
           <h2 className={styles.search_prefix}>in</h2>
           <Searchbar url="search" changeInput={handleInputChange} param="location"/>
-          <Button handleResult={handleResult} inputArray={input}/>
+          <Button resultState={result} handleResult={handleResult} inputArray={input}/>
         </div>
-        <YelpContainer data={result}/>
+        <YelpContainer handleResult={handleResult} filterState={filter} filterControl={handleFilterState} data={result}/>
       </body>
       <PyramidImage id={styles.svg}/>
     </div>

@@ -1,6 +1,5 @@
-
-
 .Button {
+  user-select: none;
   transition: 2s ease-in-out;
   background: #2D5B54;
   color: white;

@@ -1,46 +1,95 @@
 #parent_container{
     margin: auto;
     max-width: 80%;
-    display: grid;
     grid-template-columns: 1fr;
-    transition: all 5;
-    justify-items: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#categoryListings{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+    font-size: 30px;
+    color: #2D5B54;
+    min-height: 80px;
+    padding: 5px;
+    align-items: end;
+    justify-items: left;
+    font-family: Calibri;
+    font-weight: 900;
+    user-select:none;
+}
+
+#categoryListings name {
+    grid-column: 1 / 1;
+    font-weight: inherit;
+
+}
+
+#categoryListings location {
+    grid-column: 2 / 2;
+    font-weight: inherit;
+}
+
+#categoryListings popularity {
+    grid-column: 3 / 3;
+    position:relative;
+    right: 50px;
+    font-weight: inherit;
+}
+
+#categoryListings zipcode {
+    grid-column: 4 / 4;
+    position: relative;
+    right: 10px;
+    font-weight: inherit;
+}
+
+#categoryListings number {
+    grid-column: 5 / 5;
+    position: relative;
+    font-weight: inherit;
 }
 
 .yelp_child{
+    transition: all .5s;
     display: grid;
     row-gap: 50px;
-    grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
     font-size: 30px;
     color: #2D5B54;
+    min-height: 100px;
     padding: 5px;
+    align-items: center;
     font-family: Calibri;
     font-weight: 300;
 }
 
 column.name{
     grid-column: 1 / 1;
+    pointer-events: none;
 }
 column.address{
     grid-column: 2 / 2;
+    pointer-events: none;
 }
-column.city{
+column.popularity{
     grid-column: 3 / 3;
+    pointer-events: none;
 }
 column.zipcode{
     grid-column: 4 / 4;
+    pointer-events: none;
 }
 column.phone{
     grid-column: 5 / 5;
+    pointer-events: none;
 }
+
 
 .deliminator{
     width: 100%;
     background-color: #2D5B54;
     height: 10px;
-    grid-column: 1/6;
 }
-
-
-
 

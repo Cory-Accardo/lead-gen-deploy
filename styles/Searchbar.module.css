@@ -14,12 +14,7 @@
 
 .input:focus {
   font-style: italic;
-  padding-bottom: 2px;
   border-width: 3px;
   border-image: linear-gradient(to right, #2D5B54, #afe9c5);
   border-image-slice: 1;
-}
-
-.input:required, .input:invalid {
-  box-shadow: none;
 }

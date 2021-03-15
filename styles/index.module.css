@@ -4,11 +4,14 @@
 }
 
 .skeleton{
+  transition: all 2s;
   display: grid;
   max-height: 30px;
 }
 
 #svg{
+  transition: all 4s;
+  position:relative;
   width: 100%;
   height: auto;
   margin-left: 2%;
@@ -17,8 +20,9 @@
 }
 
 .search_container{
+  user-select: none;
   margin-top: 10%;
-  margin-bottom: 5%;
+  margin-bottom: 0%;
   display:flex;
   justify-content: center;
   overflow: hidden;
@@ -41,10 +45,13 @@
 
 .logo_group{
   margin: 5px 0 10px 0;
+  user-select: none;
 }
 
 
+
 #logo_title{
+  transition: all .25s;
   color: #2D5B54;
   font-size: 75px;
   font-family: LogoFont;
@@ -54,3 +61,10 @@
   align-self: center;
 }
 
+#logo_title:hover{
+  cursor: pointer;
+}
+
+#logo_title:active{
+  font-size: 70px;
+}

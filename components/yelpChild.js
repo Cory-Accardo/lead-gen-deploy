@@ -1,7 +1,14 @@
 import styles from '../styles/Container.module.css'
 
 function YelpChild(props) {
-    console.log(props.data)
+    const handleEnter = e =>{
+      e.target.style.backgroundColor = '#2d5b583a'
+    }
+    const handleLeave = e => {
+      e.target.style.backgroundColor = 'transparent'
+    }
+    const handleClick = e =>{
+    }
     const business = {
         address : props.data.location.address1 + " " + props.data.location.address2,
         city : props.data.location.city,
@@ -15,15 +22,18 @@ function YelpChild(props) {
         review_count: props.data.review_count,
         yelp_url: props.data.yelp_url,
         categories: props.data.categories,
+        popularity: (Math.round(Math.log(props.data.review_count) * props.data.rating))
     }
     return (
-      <div className={styles.yelp_child}>
+      <div>
           <div className={styles.deliminator}/>
-          <column className={styles.name}>{business.name}</column> 
-          <column className={styles.address}>{business.address}</column>
-          <column className={styles.city}>{business.city}</column>
-          <column className={styles.zipcode}>{business.zipcode}</column>
-          <column className={styles.phone}>{business.phone}</column>
+            <div className={styles.yelp_child} onClick = {handleClick} onMouseOut={handleLeave} onMouseOver={handleEnter}>
+              <column className={styles.name}>{business.name}</column> 
+              <column className={styles.address}>{business.address}</column>
+              <column className={styles.popularity}>{business.popularity}</column>
+              <column className={styles.zipcode}>{business.zipcode}</column>
+              <column className={styles.phone}>{business.phone}</column>
+            </div>
       </div>
     );
   }

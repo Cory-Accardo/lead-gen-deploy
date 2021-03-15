@@ -3,30 +3,57 @@ import styles from '../styles/Button.module.css'
 const axios = require('axios').default; 
 
 function Button(props) {
-  const handleSubmit = () => {
-    const input = [[props.inputArray.param1.metaArray, props.inputArray.param1.text], [props.inputArray.param2.metaArray, props.inputArray.param2.text]]
-    if(input[0][1].length > 1 && input[1][1].length > 1){
-    axios.get(`api/${input[0][0][1]}`, { // search url from button props
-      params: { //button accepts two params.
-        param1: {
-          text: input[0][1], 
-          meta: input[0][0]
-        },
-        param2: {
-          text: input[1][1],
-          meta: input[1][0]
-        },
-      },
-    }).then(response => { // handles responses from request
-      props.handleResult(JSON.stringify(response));
-    }, error=> {
-      props.handleResult(JSON.stringify(error));
-    })
+  const handleError = () =>{
+    document.getElementById('button').textContent = 'Enter more text'
+    
+    setTimeout(() => { // reverses changes after set ms
+      document.getElementById('button').textContent = 'Submit'
+    }, 2000)
   }
+  const handleInitialSearch = () =>{
+    document.getElementById('button').textContent = 'Searching...'
+  }
+  const handleEmptyResult = () =>{
+    document.getElementById('button').textContent = 'No results...'
+    setTimeout(() => { // reverses changes after set ms
+      document.getElementById('button').textContent = 'Submit'
+    }, 2000)
+  }
+  const handleValidResult = () => {
+    document.getElementById('button').textContent = 'Results found!'
+    setTimeout(() => { // reverses changes after set ms
+      document.getElementById('button').textContent = 'Submit'
+    }, 2000)
+  }
+
+  const handleSubmit = () => {
+    handleInitialSearch()
+    if(props.inputArray.param1.text.length > 2 && props.inputArray.param2.text.length > 1){
+      axios.get(`api/${props.inputArray.param1.metaArray[1]}`, { // search url from button props
+        params: { //button accepts two params.
+          param1: {
+            text: props.inputArray.param1.text, 
+            meta: props.inputArray.param1.metaArray
+          },
+          param2: {
+            text: props.inputArray.param2.text,
+            meta: props.inputArray.param2.metaArray
+          },
+        },
+      }).then(response => { // handles responses from request
+        props.handleResult(JSON.stringify(response));
+        if(response.data == undefined || response.data.length < 1){handleEmptyResult()}
+        else{handleValidResult()}
+      }, error=> {
+        props.handleResult(JSON.stringify(error));
+        handleEmptyResult()
+      })
+    }
+  else{handleError()}
 }
   return (
     <div>
-      <button className={styles.Button} type="button" onClick={handleSubmit}>Submit</button>
+      <button id="button" className={styles.Button} type="button" onClick={handleSubmit}>Submit</button>
     </div>
   );
 }
