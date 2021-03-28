@@ -6,9 +6,7 @@ const apiKey = 'ZRE8o2S75GiaDgbs3Ch0a2mI1yUTFRiIb8Ds2laQba7gbmO4_jHZas-I07c_umXP
 const client = yelp.client(apiKey); 
 
 
-
-export default function(req, res){
-  console.log('I am at the api page')
+module.exports = (req, res) => {
   return new Promise(resolve => { 
     const category = JSON.parse(req.query.param1)
     const location = JSON.parse(req.query.param2)
@@ -22,6 +20,7 @@ export default function(req, res){
     client.search(searchRequest).then(response => {
       const result = Object.values(response.jsonBody.businesses);
       res.status(200).json(result);
+      console.log(req);
       return resolve();
     }).catch(e =>{
       res.status(500).json(e)
