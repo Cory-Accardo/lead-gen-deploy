@@ -93,3 +93,157 @@ column.phone{
     height: 10px;
 }
 
+@media only screen and (max-width: 900px) {
+    .yelp_child{
+        transition: all .5s;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+        column-gap: 20px;
+        font-size: 20px;
+        color: #2D5B54;
+        min-height: 80px;
+        padding: 5px;
+        align-items: center;
+        font-family: Calibri;
+        font-weight: 300;
+    }
+    #categoryListings name {
+        grid-column: 1 / 1;
+        font-weight: inherit;
+        font-size: 15px;
+    
+    }
+    
+    #categoryListings location {
+        grid-column: 2 / 2;
+        font-weight: inherit;
+        font-size: 15px;
+    }
+    
+    #categoryListings popularity {
+        grid-column: 3 / 3;
+        position: relative;
+        left: -35px;
+        font-weight: inherit;
+        font-size: 15px;
+    }
+    
+    #categoryListings zipcode {
+        grid-column: 4 / 4;
+        position: relative;
+        font-weight: inherit;
+        font-size: 15px;
+    }
+    
+    #categoryListings number {
+        grid-column: 5 / 5;
+        position: relative;
+        font-weight: inherit;
+        font-size: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .yelp_child{
+        transition: all .5s;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+        column-gap: 20px;
+        font-size: 13px;
+        color: #2D5B54;
+        min-height: 80px;
+        padding: 5px;
+        align-items: center;
+        font-family: Calibri;
+        font-weight: 300;
+    }
+
+    #categoryListings name {
+        grid-column: 1 / 1;
+        font-weight: inherit;
+        font-size: 12px;
+    
+    }
+    
+    #categoryListings location {
+        grid-column: 2 / 2;
+        font-weight: inherit;
+        font-size: 12px;
+    }
+    
+    #categoryListings popularity {
+        grid-column: 3 / 3;
+        position: relative;
+        left: -20px;
+        font-weight: inherit;
+        font-size: 12px;
+    }
+    
+    #categoryListings zipcode {
+        grid-column: 4 / 4;
+        position: relative;
+        font-weight: inherit;
+        font-size: 12px;
+    }
+    
+    #categoryListings number {
+        grid-column: 5 / 5;
+        position: relative;
+        font-weight: inherit;
+        font-size: 12px;
+    }
+    
+  }
+
+  @media only screen and (max-width: 400px) {
+    .yelp_child{
+        transition: all .5s;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+        column-gap: 20px;
+        font-size: 12px;
+        color: #2D5B54;
+        min-height: 80px;
+        padding: 5px;
+        align-items: center;
+        font-family: Calibri;
+        font-weight: 300;
+    }
+
+    #categoryListings name {
+        grid-column: 1 / 1;
+        font-weight: inherit;
+        font-size: 11px;
+    
+    }
+    
+    #categoryListings location {
+        grid-column: 2 / 2;
+        font-weight: inherit;
+        font-size: 11px;
+    }
+    
+    #categoryListings popularity {
+        grid-column: 3 / 3;
+        position: relative;
+        left: -13px;
+        font-weight: inherit;
+        font-size: 11px;
+    }
+    
+    #categoryListings zipcode {
+        grid-column: 4 / 4;
+        position: relative;
+        left: -4px;
+        font-weight: inherit;
+        font-size: 11px;
+    }
+    
+    #categoryListings number {
+        grid-column: 5 / 5;
+        position: relative;
+        font-weight: inherit;
+        font-size: 11px;
+    }
+    
+  }

@@ -3,6 +3,14 @@
   src: url('../fonts/Anurati-Regular.otf');
 }
 
+#neuron{
+  max-width: 100%;
+  display:inline-block;
+  margin: 0 auto;
+  position: relative;
+  bottom: 20%;
+}
+
 .skeleton{
   transition: all 2s;
   display: grid;
@@ -67,4 +75,22 @@
 
 #logo_title:active{
   font-size: 70px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .skeleton{
+    width: 100%;
+  }
+  .search_container{
+    display:grid;
+    grid-template-rows: 50px 25px 40px;
+    margin-top: 0;
+  }
+  .search_prefix{
+  visibility: hidden;
+  user-select: none;
+  }
 }

@@ -1,3 +1,4 @@
+
 .input {
   margin: 0 10px;
   transition: all .15s;
@@ -17,4 +18,26 @@
   border-width: 3px;
   border-image: linear-gradient(to right, #2D5B54, #afe9c5);
   border-image-slice: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .input{
+    text-align: center;
+    margin-right: 5%;
+    font-size: 30px;
+    width: 10em;
+    max-width: 10em;
+    font-style: italic;
+    border-width: 3px;
+    border-color: #2D5B54;
+    border-image-slice: 1;
+  }
+  .input:focus {
+    border-width: 3px;
+    border-image-slice: 1;
+  }
+  .search_icon{
+    height: auto;
+    width: 40px;
+  }
 }

@@ -1,4 +1,4 @@
-import PyramidImage from '../assets/svg/temple.svg'
+import Neuron from '../assets/svg/neuron.svg'
 import styles from '../styles/index.module.css';
 import Searchbar from '../components/Searchbar.js';
 import Button from '../components/Button.js';
@@ -21,11 +21,6 @@ function App() {
   const [filter, setFilter] = useState(null)
   const handleLogoClick = (e) => {
     setResult(null)
-  }
-  const handleScroll = e => {
-    if(result == null || JSON.parse(result).data.length < 1){
-      document.getElementById(styles.svg).style.top = `${e.deltaY}px`
-    }
   }
   const handleResult = (response) => {
     setResult(response)
@@ -71,21 +66,20 @@ function App() {
     setFilter(filterState)
   }
   return (
-    <div onWheel={handleScroll} className = {styles.skeleton}>
+    <div className = {styles.skeleton}>
       <div className = {styles.Header}>
         <h1 onClick = {handleLogoClick} className= {styles.logo_group} id={styles.logo_title}>BE BOPE</h1>
       </div>
       <body>
         <div className={styles.search_container}>
           <h2 className={styles.search_prefix}>Search for</h2>
-          <Searchbar url="search" changeInput={handleInputChange} param="business"/>
+          <Searchbar className = {styles.search_bar} url="search" changeInput={handleInputChange} param="business"/>
           <h2 className={styles.search_prefix}>in</h2>
-          <Searchbar url="search" changeInput={handleInputChange} param="location"/>
+          <Searchbar className = {styles.search_bar} url="search" changeInput={handleInputChange} param="location"/>
           <Button resultState={result} handleResult={handleResult} inputArray={input}/>
         </div>
         <YelpContainer handleResult={handleResult} filterState={filter} filterControl={handleFilterState} data={result}/>
       </body>
-      <PyramidImage id={styles.svg}/>
     </div>
   );
 }
