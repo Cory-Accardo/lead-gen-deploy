@@ -7,7 +7,7 @@ const client = yelp.client(apiKey);
 
 
 
-export default (req, res) => {
+export default function(req, res){
   console.log('I am at the api page')
   return new Promise(resolve => { 
     const category = JSON.parse(req.query.param1)
