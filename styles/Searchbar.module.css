@@ -40,6 +40,10 @@
 
 @media only screen and (max-width: 600px) {
   .input{
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: none;
+    -webkit-appearance: none;
+    box-shadow: none;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -56,6 +60,15 @@
     border-image-slice: 1;
   }
   .input:focus {
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+    outline: none;
     font-style: normal;
     border-width: 3px;
     border-image-slice: 1;
