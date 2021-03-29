@@ -58,7 +58,7 @@
 #categoryListings zipcode {
     grid-column: 4 / 4;
     position: relative;
-    right: 10px;
+    right: -20px;
     font-weight: inherit;
 }
 
@@ -162,9 +162,12 @@ column.phone{
     }
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 600px) {
     #parent_container{
         max-width: 90%;
+    }
+    #categoryListings zipcode {
+        right: -18px;
     }
   }
 
@@ -208,9 +211,7 @@ column.phone{
     }
     
     #categoryListings zipcode {
-        grid-column: 4 / 4;
-        position: relative;
-        font-weight: inherit;
+        right: -10px;
         font-size: 12px;
     }
     
@@ -261,7 +262,7 @@ column.phone{
     #categoryListings zipcode {
         grid-column: 4 / 4;
         position: relative;
-        left: -4px;
+        right: -7px;
         font-weight: inherit;
         font-size: 11px;
     }

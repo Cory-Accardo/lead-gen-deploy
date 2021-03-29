@@ -40,7 +40,10 @@
 
 @media only screen and (max-width: 600px) {
   .input{
-    -webkit-appearance: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
     outline: none;
     text-align: center;
     margin-right: 5%;
