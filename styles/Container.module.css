@@ -1,3 +1,20 @@
+@font-face {
+    font-family: LogoFont;
+    src: url('../fonts/Anurati-Regular.otf');
+  }
+  
+  @font-face {
+    font-family: RobotoLight;
+    src: url('../fonts/Roboto-Light.ttf')
+  }
+  
+  
+  @font-face {
+    font-family: RobotoRegular;
+    src: url('../fonts/Roboto-Regular.ttf')
+  }
+  
+
 #parent_container{
     margin: auto;
     max-width: 80%;
@@ -9,13 +26,13 @@
 #categoryListings{
     display: grid;
     grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
-    font-size: 30px;
+    font-size: 25px;
     color: #2D5B54;
     min-height: 80px;
     padding: 5px;
     align-items: end;
     justify-items: left;
-    font-family: Calibri;
+    font-family: RobotoRegular;
     font-weight: 900;
     user-select:none;
 }
@@ -56,12 +73,12 @@
     display: grid;
     row-gap: 50px;
     grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
-    font-size: 30px;
+    font-size: 25px;
     color: #2D5B54;
     min-height: 100px;
     padding: 5px;
     align-items: center;
-    font-family: Calibri;
+    font-family: RobotoLight;
     font-weight: 300;
 }
 
@@ -104,7 +121,6 @@ column.phone{
         min-height: 80px;
         padding: 5px;
         align-items: center;
-        font-family: Calibri;
         font-weight: 300;
     }
     #categoryListings name {
@@ -206,7 +222,6 @@ column.phone{
         min-height: 80px;
         padding: 5px;
         align-items: center;
-        font-family: Calibri;
         font-weight: 300;
     }
 

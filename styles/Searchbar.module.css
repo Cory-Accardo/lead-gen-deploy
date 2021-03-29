@@ -1,8 +1,26 @@
+@font-face {
+  font-family: LogoFont;
+  src: url('../fonts/Anurati-Regular.otf');
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url('../fonts/Roboto-Light.ttf')
+}
+
+
+@font-face {
+  font-family: RobotoRegular;
+  src: url('../fonts/Roboto-Regular.ttf')
+}
+
+
+
 
 .input {
   margin: 0 10px;
   transition: all .15s;
-  font-family: Calibri;
+  font-family: RobotoLight;
   width: 2em;
   border: 0;
   border-bottom: 2px solid #9b9b9b;

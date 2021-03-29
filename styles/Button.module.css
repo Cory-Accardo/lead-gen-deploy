@@ -1,12 +1,27 @@
+@font-face {
+  font-family: RobotoBold;
+  src: url('../fonts/Roboto-Bold.ttf')
+}
+
+@font-face {
+  font-family: RobotoRegular;
+  src: url('../fonts/Roboto-Regular.ttf')
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url('../fonts/Roboto-Light.ttf')
+}
+
 .Button {
   user-select: none;
   transition: 2s ease-in-out;
   background: #2D5B54;
   color: white;
 
-  font-family: Calibri;
+  font-family: RobotoLight;
   border-radius: 10px;
-  font-weight: 900;
+  font-weight: 200;
   font-size: 20px;
   margin-top: 20px;
   margin-left: 10px;
