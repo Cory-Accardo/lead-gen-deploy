@@ -41,36 +41,26 @@
 @media only screen and (max-width: 600px) {
   .input{
     -webkit-border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
     border-top: none;
     border-right: none;
     border-left: none;
     border-radius: 0px;
-    outline: none;
     text-align: center;
     margin-right: 5%;
     font-size: 30px;
     width: 10em;
     max-width: 10em;
     font-style: normal;
-    border-width: 3px;
-    border-color: #2D5B54;
-    border-image-slice: 1;
   }
   .input:focus {
     border-image: none;
     -webkit-border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
     border-top: none;
     border-right: none;
     border-left: none;
     border-radius: 0px;
-    outline: none;
     font-style: normal;
     border-width: 3px;
-    border-image-slice: 1;
   }
 
   .input::placeholder{
