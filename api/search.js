@@ -7,8 +7,6 @@ const client = yelp.client(apiKey);
 
 
 module.exports = (req, res) => {
-  console.log('HELLO!!!! DID I AT LEAST GET HERE?')
-  console.log(req)
   return new Promise(resolve => { 
     const category = JSON.parse(req.query.param1)
     const location = JSON.parse(req.query.param2)

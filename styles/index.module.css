@@ -87,10 +87,28 @@
   .search_container{
     display:grid;
     grid-template-rows: 50px 25px 40px;
-    margin-top: 0;
+    margin-top: -6%;
   }
   .search_prefix{
   visibility: hidden;
   user-select: none;
+  }
+  #logo_title{
+    transition: all .25s;
+    color: #2D5B54;
+    font-size: 50px;
+    font-family: LogoFont;
+    font-weight: 300;
+    font-style: normal;
+    margin: 10% auto 2% auto;
+    align-self: center;
+  }
+  
+  #logo_title:hover{
+    cursor: pointer;
+  }
+  
+  #logo_title:active{
+    font-size: 55px;
   }
 }
