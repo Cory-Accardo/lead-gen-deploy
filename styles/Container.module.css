@@ -111,6 +111,9 @@ column.phone{
 }
 
 @media only screen and (max-width: 900px) {
+    #parent_container{
+        max-width: 85%;
+    }
     .yelp_child{
         transition: all .5s;
         display: grid;
@@ -159,13 +162,22 @@ column.phone{
     }
   }
 
+  @media only screen and (max-width: 900px) {
+    #parent_container{
+        max-width: 90%;
+    }
+  }
+
   @media only screen and (max-width: 500px) {
+    #parent_container{
+        max-width: 95%;
+    }
     .yelp_child{
         transition: all .5s;
         display: grid;
         grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
         column-gap: 20px;
-        font-size: 13px;
+        font-size: 11px;
         color: #2D5B54;
         min-height: 80px;
         padding: 5px;
@@ -217,7 +229,7 @@ column.phone{
         display: grid;
         grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
         column-gap: 20px;
-        font-size: 12px;
+        font-size: 10px;
         color: #2D5B54;
         min-height: 80px;
         padding: 5px;

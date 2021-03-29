@@ -50,7 +50,7 @@ function YelpContainer(props) {
         <name>Name</name>
         <location>Address</location>
         <popularity onClick={handleFilterClick}>Popularity</popularity>
-        <zipcode>Zipcode</zipcode>
+        <zipcode>Zip</zipcode>
         <number>Number</number>
       </div>
       <div>
