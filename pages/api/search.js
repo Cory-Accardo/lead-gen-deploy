@@ -20,7 +20,6 @@ module.exports = (req, res) => {
     client.search(searchRequest).then(response => {
       const result = Object.values(response.jsonBody.businesses);
       res.status(200).json(result);
-      console.log(req);
       return resolve();
     }).catch(e =>{
       res.status(500).json(e)

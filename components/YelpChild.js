@@ -1,4 +1,5 @@
 import styles from '../styles/Container.module.css'
+import Router from 'next/router'
 
 function YelpChild(props) {
     const handleEnter = e =>{
@@ -8,6 +9,8 @@ function YelpChild(props) {
       e.target.style.backgroundColor = 'transparent'
     }
     const handleClick = e =>{
+      props.handleSelection(business)
+      Router.push('/selection')
     }
     const business = {
         address : props.data.location.address1 + " " + props.data.location.address2,
@@ -20,7 +23,7 @@ function YelpChild(props) {
         name: props.data.name,
         phone: props.data.display_phone,
         review_count: props.data.review_count,
-        yelp_url: props.data.yelp_url,
+        yelp_url: props.data.url,
         categories: props.data.categories,
         popularity: (Math.round(Math.log(props.data.review_count) * props.data.rating))
     }

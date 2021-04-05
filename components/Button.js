@@ -4,26 +4,31 @@ const axios = require('axios').default;
 
 function Button(props) {
   const handleError = () =>{
-    document.getElementById('button').textContent = 'Enter more text'
-    
-    setTimeout(() => { // reverses changes after set ms
-      document.getElementById('button').textContent = 'Submit'
-    }, 2000)
+      document.getElementById('button').textContent = 'Enter more text'
+      setTimeout(() => { // reverses changes after set ms
+        if(document.getElementById('button')!=null){
+          document.getElementById('button').textContent = 'Submit'
+        }
+      }, 2000)
   }
   const handleInitialSearch = () =>{
-    document.getElementById('button').textContent = 'Searching...'
-  }
+      document.getElementById('button').textContent = 'Searching...'
+    }
   const handleEmptyResult = () =>{
-    document.getElementById('button').textContent = 'No results...'
-    setTimeout(() => { // reverses changes after set ms
-      document.getElementById('button').textContent = 'Submit'
-    }, 2000)
+      document.getElementById('button').textContent = 'No results...'
+      setTimeout(() => { // reverses changes after set ms
+        if(document.getElementById('button')!=null){
+          document.getElementById('button').textContent = 'Submit'
+        }
+      }, 2000)
   }
   const handleValidResult = () => {
-    document.getElementById('button').textContent = 'Results found!'
-    setTimeout(() => { // reverses changes after set ms
-      document.getElementById('button').textContent = 'Submit'
-    }, 2000)
+      document.getElementById('button').textContent = 'Results found!'
+      setTimeout(() => { // reverses changes after set ms
+        if(document.getElementById('button')!=null){
+          document.getElementById('button').textContent = 'Submit'
+        }
+      }, 2000)
   }
 
   const handleSubmit = () => {

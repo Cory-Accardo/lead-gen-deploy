@@ -26,7 +26,7 @@ function YelpContainer(props) {
               }) 
             }
             const display = sortedData.map(data => {
-                return <YelpChild data={data}/>
+                return <YelpChild handleSelection={props.handleSelection} data={data}/>
             })
             return display;
         }

@@ -1,0 +1,115 @@
+
+  @font-face {
+    font-family: RobotoLight;
+    src: url('../fonts/Roboto-Light.ttf')
+  }
+  
+  
+  @font-face {
+    font-family: RobotoRegular;
+    src: url('../fonts/Roboto-Regular.ttf')
+  }
+
+.selection_page{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: none;
+    user-select: none;
+}
+
+.header{
+    grid-row: 1/1;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 10;
+    display: flex;
+    max-height: 5%;
+}
+
+.header .back_div{
+    transition: all .5s;
+    border: 2px solid #2D5B54;
+    background-color: #2D5B54;
+    border-radius: 10px;
+    margin-top: 14px;
+    margin-right: 50px;
+    min-width: 3.5%;
+    height: 48px;
+}
+
+.header .back_div:hover{
+    background-color:#ECFFF9;
+}
+
+.header .back_div #back_icon{
+    transition: all .5s;
+    height: 20px;
+    padding: 14px 18px;
+}
+
+.header .back_div #back_icon:hover{
+    filter: brightness(30%);
+
+}
+
+.header h1{
+    font-family: RobotoLight;
+    margin-right: 200px;
+    color: #2D5B54;
+}
+
+.deep_search_div{
+    font-family: RobotoLight;
+    color: #ECFFF9;
+    text-align: center;
+    transition: all .5s;
+    border: 2px solid #2D5B54;
+    background-color: #2D5B54;
+    border-radius: 10px;
+    margin-top: 14px;
+    margin-left: 2%;
+    width: 120px;
+    height: 48px;
+}
+
+.deep_search_div:hover{
+    background-color:#ECFFF9;
+    color: #2D5B54;
+}
+
+
+.parent_grid{
+    grid-row: 2/2;
+    font-family: RobotoLight;
+    font-size: 20px;
+    color: #2D5B54;
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 10px;
+    min-width: 650px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+}
+
+.parent_grid .row{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-top: 4px solid #2D5B54;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.parent_grid .row .title{
+    border-right: 2px dotted #5a8f87;
+}
+
+.parent_grid .row .information{
+    margin-left: 50px;
+}
+
+#last_row{
+    padding-bottom: 10px;
+    border-bottom: 4px solid #2D5B54;
+}
+
