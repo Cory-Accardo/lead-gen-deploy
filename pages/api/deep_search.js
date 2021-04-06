@@ -6,7 +6,6 @@ const { JSDOM } = jsdom;
 module.exports = (req, res) => {
     return new Promise(resolve =>{
         const yelp_url = req.query.yelp_url;
-        console.log(yelp_url);
         deep_search();
         async function deep_search(){
             try{

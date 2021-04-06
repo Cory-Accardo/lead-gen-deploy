@@ -1,4 +1,5 @@
 import styles from '../styles/selection.module.css'
+import SatteliteSvg from '../assets/svg/sattelite.svg'
 import BackIcon from '../assets/svg/back_icon.svg'
 import { Router, useRouter } from 'next/router'
 import { useEffect } from 'react';
@@ -60,6 +61,7 @@ function Selection(props){
                     <p>Deep search</p>
                 </div>
             </header>
+            <h1 id={styles.mobile_name}>{business.name}</h1>
             <div className = {styles.parent_grid}>
                 <div className={styles.row}>
                     <span className={styles.title}>Address</span>
@@ -78,7 +80,7 @@ function Selection(props){
                     <span className={styles.information}> {props.deepContents.facebook} </span>
                 </div>
                 <div className={styles.row}>
-                    <span className={styles.title}> Instagram</span>
+                    <span className={styles.title}>Instagram</span>
                     <span className={styles.information}> {props.deepContents.instagram} </span>
                 </div>
                 <div className={styles.row}>

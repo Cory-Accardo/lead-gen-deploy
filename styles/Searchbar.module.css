@@ -18,6 +18,7 @@
 
 
 .input {
+  text-align: center;
   margin: 0 10px;
   transition: all .15s;
   font-family: RobotoLight;

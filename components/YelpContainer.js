@@ -41,17 +41,15 @@ function YelpContainer(props) {
       }
       else{
         props.filterControl(e.target.textContent.toLowerCase())
-        e.target.textContent = 'Popularity +'
+        e.target.textContent = 'Popularity+'
       }
     }
   return (
     <div id={styles.parent_container}>
       <div id={styles.categoryListings}>
-        <name>Name</name>
-        <location>Address</location>
-        <popularity onClick={handleFilterClick}>Popularity</popularity>
-        <zipcode>Zip</zipcode>
-        <number>Number</number>
+        <span id={styles.cat_name}>Name</span>
+        <span id={styles.cat_pop} onClick={handleFilterClick}>Popularity</span>
+        <span id={styles.cat_add}>Address</span>
       </div>
       <div>
         {handleDisplay(props.data)}

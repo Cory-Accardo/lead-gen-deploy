@@ -19,11 +19,13 @@
 
 .header{
     grid-row: 1/1;
-    width: 90%;
     margin: 0 auto;
-    z-index: 10;
+    width: 90%;
     display: flex;
-    max-height: 5%;
+}
+
+#mobile_name{
+    display: none;
 }
 
 .header .back_div{
@@ -31,9 +33,8 @@
     border: 2px solid #2D5B54;
     background-color: #2D5B54;
     border-radius: 10px;
-    margin-top: 14px;
-    margin-right: 50px;
-    min-width: 3.5%;
+    margin-top: 3.5%;
+    margin-right: 4%;
     height: 48px;
 }
 
@@ -54,7 +55,8 @@
 
 .header h1{
     font-family: RobotoLight;
-    margin-right: 200px;
+    width: fit-content;
+    margin-top: 3.8%;
     color: #2D5B54;
 }
 
@@ -66,10 +68,18 @@
     border: 2px solid #2D5B54;
     background-color: #2D5B54;
     border-radius: 10px;
-    margin-top: 14px;
-    margin-left: 2%;
+    margin-top: 3.5%;
+    margin-left: 5%;
     width: 120px;
+    min-width: 120px;
     height: 48px;
+}
+
+#sattelite_svg{
+    position:absolute;
+    z-index: 10;
+    height: 25px;
+    width: 25px;
 }
 
 .deep_search_div:hover{
@@ -86,7 +96,8 @@
     display: grid;
     grid-template-rows: 1fr;
     row-gap: 10px;
-    min-width: 650px;
+    width: 90%;
+    min-width: 0px;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2.5%;
@@ -106,6 +117,7 @@
 
 .parent_grid .row .information{
     margin-left: 50px;
+    user-select: all;
 }
 
 #last_row{
@@ -113,3 +125,30 @@
     border-bottom: 4px solid #2D5B54;
 }
 
+@media only screen and (max-width: 800px) {
+    .header h1{
+        font-size: 25px;
+        margin-top: 5.5%;
+    }
+}
+
+
+@media only screen and (max-width: 420px) {
+    .header h1{
+        display: none;
+    }
+    #mobile_name{
+        font-family: RobotoRegular;
+        color: #2D5B54;
+        position: relative;
+        bottom: 600px;
+        margin: 0 auto;
+        display:block;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .header h1{
+        font-size: 20px;
+        margin-top: 4.5%;
+    }
+}

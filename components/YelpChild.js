@@ -31,11 +31,9 @@ function YelpChild(props) {
       <div>
           <div className={styles.deliminator}/>
             <div className={styles.yelp_child} onClick = {handleClick} onMouseOut={handleLeave} onMouseOver={handleEnter}>
-              <column className={styles.name}>{business.name}</column> 
-              <column className={styles.address}>{business.address}</column>
-              <column className={styles.popularity}>{business.popularity}</column>
-              <column className={styles.zipcode}>{business.zipcode}</column>
-              <column className={styles.phone}>{business.phone}</column>
+              <span className={styles.name}>{business.name}</span> 
+              <span className={styles.popularity}>{business.popularity}</span>
+              <span className={styles.address}>{props.data.location.address1}</span>
             </div>
       </div>
     );
